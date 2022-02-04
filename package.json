@@ -1,0 +1,17 @@
+{
+  "name": "banco-solar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "moment": "^2.29.1",
+    "pg": "^8.7.1"
+  }
+}
