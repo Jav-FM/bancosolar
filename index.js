@@ -103,7 +103,7 @@ const server = http.createServer(async (req, res) => {
     });
     req.on("end", async () => {
       const { emisor, receptor, monto } = JSON.parse(body);
-      const result = await transferirSaldo([emisor, receptor, monto]);
+      const result = await transferirSaldo(emisor, receptor, monto);
 
       if (!result.ok) {
         res.writeHead(500, { "content-type": "application/json" });
