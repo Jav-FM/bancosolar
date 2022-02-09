@@ -74,7 +74,10 @@ const editarUsuario = async (datos) => {
 
 const eliminarUsuario = async (id) => {
   const client = await pool.connect();
-  const query = `delete from usuarios where id=${id} RETURNING *`;
+  const query = {
+    text: "delete from usuarios where id=$1 RETURNING *",
+    values: id,
+  };
   try {
     const result = await client.query(query);
     return {
