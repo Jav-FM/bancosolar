@@ -10,8 +10,6 @@ const {
   consultarTransferencias,
 } = require("./db");
 
-//Al registrar transferencia me dice que los datos no son validos para integer
-//LO cual es correcto pq estoy mandando los nombres de emisor y receptor, no los id...
 const server = http.createServer(async (req, res) => {
   if (req.url === "/" && req.method === "GET") {
     res.setHeader("content-type", "text/html");
